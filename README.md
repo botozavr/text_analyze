@@ -1,12 +1,12 @@
-usage: wordfreq.py [-h] [-t TOP] input_file
+п»їusage: wordfreq.py [-h] [-t TOP] input_file
 
-Анализатор текстовых файлов
+РђРЅР°Р»РёР·Р°С‚РѕСЂ С‚РµРєСЃС‚РѕРІС‹С… С„Р°Р№Р»РѕРІ
 
 positional arguments:
-  input_file         Путь к файлу для анализа
+  input_file         РџСѓС‚СЊ Рє С„Р°Р№Р»Сѓ РґР»СЏ Р°РЅР°Р»РёР·Р°
 
 optional arguments:
   -h, --help         show this help message and exit
-  -t TOP, --top TOP  Количество топ-слов для вывода (по умолчанию: 10)
+  -t TOP, --top TOP  РљРѕР»РёС‡РµСЃС‚РІРѕ С‚РѕРї-СЃР»РѕРІ РґР»СЏ РІС‹РІРѕРґР° (РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ: 10)
 
-Пример использования: python -m wordfreq.py path/to/file.txt --top 20
+РџСЂРёРјРµСЂ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ: python -m wordfreq.py path/to/file.txt --top 20
