@@ -8,7 +8,7 @@ o	подсчёт частоты слов (возврат dict).
 #text_utils.py
 
 from re import sub
-from typing import List
+from typing import List, Dict
 
 def clear_text(my_str: str) -> str:
     """Очищает текст от знаков препинания"""
@@ -18,7 +18,7 @@ def sep_words (my_str: str) -> List[str]:
     """"Разделяет текст на слова"""
     return my_str.split()
 
-def count_words(words: List[str]) -> int:
+def count_words(words: List[str]) -> Dict[str, int]:
     """Подсчёт частоты слов"""
     x = {}
     for i in words:

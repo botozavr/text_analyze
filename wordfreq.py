@@ -21,10 +21,17 @@ def analyze_file(path: str, top: int = 10) -> DocumentStats:
     try:
         with open(path, 'r', encoding='utf-8') as file:
             text = file.read()
+    except FileNotFoundError:
+        print(f"Ошибка: файл '{path}' не найден", file=sys.stderr)
+        sys.exit(1)
     except Exception as e:
         print(f"Ошибка: {e}", file=sys.stderr)
         sys.exit(1)
 
+    # Проверка на пустой файл
+    if not text.strip():
+        print("Ошибка: файл пуст", file=sys.stderr)
+        sys.exit(1)
 
     dict = count_words(sep_words(clear_text(text)))
     sorted_dict = {}
@@ -63,10 +70,10 @@ def main():
     print(f"-" * 30)
     print(f"Число слов: {result.word_count}")
     print(f"-" * 30)
-    print("топ-10 слов: \n")
+    print(f"топ-{args.top} слов: \n")
     for i, (word, count) in enumerate(result.top_words, 1):  # 1 - начинаем с 1
         print(f"{i:2}. Слово '{word}' встречается\t {count:4} раз(а)")
     print(f"-" * 30)
 
-
-main()
+if __name__ == "__wordfreq.py__":
+    main()
